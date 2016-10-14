@@ -1,0 +1,6 @@
+{
+  "name": "Heapdelete",
+  "tagline": "",
+  "body": "import java.util.Arrays;\r\n\r\npublic class Heap {\r\n\r\n\tprivate Node[] theHeap;\r\n\tprivate int itemsInArray = 0;\r\n\tprivate int maxSize;\r\n\r\n\tpublic Heap(int maxSize) {\r\n\t\tthis.maxSize = maxSize;\r\n\t\ttheHeap = new Node[maxSize];\r\n\t}\r\n\r\n\tpublic void insert(int index, Node newData) {\r\n\t\ttheHeap[index] = newData;\r\n\t}\r\n\r\n\tpublic void incrementTheArray() {\r\n\t\titemsInArray++;\r\n\t}\r\n\r\n\tpublic Node pop() {\r\n\r\n\t\tint tempItemsInArray = itemsInArray - 1;\r\n\r\n\t\t// Used to show how data is moved during sorting\r\n\t\tSystem.out.println(Arrays.toString(theHeap) + \"\\n\");\r\n\r\n\t\tNode root = theHeap[0];\r\n\t\ttheHeap[0] = theHeap[--itemsInArray];\r\n\r\n\t\t// Send to the array heap method starting with index 0\r\n\t\theapTheArray(0);\r\n\t\treturn root;\r\n\r\n\t}",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
